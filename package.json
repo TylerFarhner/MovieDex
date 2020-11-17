@@ -1,0 +1,25 @@
+{
+  "name": "moviedex",
+  "version": "1.0.0",
+  "description": "### Description Welcome to MovieDex! The application to create, store, and view your own personal movie library. Tired of using spreadsheets to look through your bookcase collection (or two) of movies? So are we, so we created this tool to make life just a little bit easier.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerFarhner/MovieDex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TylerFarhner/MovieDex/issues"
+  },
+  "homepage": "https://github.com/TylerFarhner/MovieDex#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
