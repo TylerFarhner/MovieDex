@@ -12,6 +12,8 @@ Welcome to MovieDex! The application to create, store, and view your own persona
 
 [Click here for more!](morephotolinks.link)
 
+---
+---
 ### Technologies Used
 ---
 * CSS
@@ -20,6 +22,8 @@ Welcome to MovieDex! The application to create, store, and view your own persona
 * Node
 * Tears (my own)
 
+---
+---
 ### **Update:** Getting Started
 ---
 **REMEMBER** to download node modules if you choose to clone or download this repository!!
@@ -28,5 +32,10 @@ Welcome to MovieDex! The application to create, store, and view your own persona
 
 If you want to see wireframes or the ERD, swing over to [my Trello.](https://trello.com/b/3kW4uA2q/moviedex)
 
+---
+---
 ### **TODO:** Next Steps
+---
+
+---
 ---
