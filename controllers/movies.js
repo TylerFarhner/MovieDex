@@ -1,7 +1,12 @@
+const Movie = require('../models/movie')
+//  ^^ Forgot this guy
+
 module.exports = {
     new: newMovie,
     create,
-    index
+    index,
+    Movie
+    // ^^ this too :)
 }
 
 function newMovie(req, res) {
