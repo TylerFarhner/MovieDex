@@ -18,9 +18,14 @@ const MONGODB_URI = process.env.MONGODB_URI
 
 // require('./config/database')
 const db = mongoose.connection;
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
-// lets us know we're connected to the DB
-db.on('connected', function() {
+mongoose.connect(MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: true
+});
+
+// lets us know we're connected to the DB (err/success minus the err)
+db.on('connected', function () {
     console.log(`connected to mongoDB at ${db.host}:${db.port}`)
 })
 
@@ -30,13 +35,15 @@ app.set('view engine', 'ejs')
 // mount middleware with app.use
 app.use(morgan('dev'))
 app.use(express.static('public'))
-app.use(express.urlencoded({ extended: false}))
+app.use(express.urlencoded({
+    extended: false
+}))
 
 // mount our routes with app.use()
 app.use('/', indexRouter)
 app.use('/movies', moviesRouter)
 
 // tell app to listen
-app.listen(port, function() {
+app.listen(port, function () {
     console.log(`Express is listening on port:${port}`)
 })
