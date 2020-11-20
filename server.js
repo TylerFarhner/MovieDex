@@ -1,15 +1,28 @@
 // Require modules
 const express = require('express')
 const morgan = require('morgan')
-const port = 3000
 const indexRouter = require('./routes/index')
 const moviesRouter = require('./routes/movies')
+// have to req. when changing from config/database
+const mongoose = require('mongoose')
 
 // set up the express app
 const app = express()
 
+// .env configuration
+require('dotenv').config()
+const port = process.env.port
+const MONGODB_URI = process.env.MONGODB_URI
+
 // connect to DB
-require('./config/database')
+
+// require('./config/database')
+const db = mongoose.connection;
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
+// lets us know we're connected to the DB
+db.on('connected', function() {
+    console.log(`connected to mongoDB at ${db.host}:${db.port}`)
+})
 
 // configure the app with app.set()
 app.set('view engine', 'ejs')
