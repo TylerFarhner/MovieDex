@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mongoose Movies</title>
+    <title>MovieDex</title>
 </head>
 <body>
     <h1>Movies Index</h1>
@@ -23,7 +23,9 @@
         </thead>
         <tbody>
             <% movies.forEach(movie => { %>
+                <!-- <tr> table rows -->
                 <tr>
+                    <!-- <td> table data (data cell) -->
                     <td><%= movie.title %></td>
                     <td><%= movie.release %></td>
                     <td><%= movie.rating %></td>

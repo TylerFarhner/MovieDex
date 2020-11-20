@@ -33,9 +33,12 @@ function create(req, res) {
 
   function index(req, res) {
     // get all movies from DB then send to index view
+
+    // empty brackets (below) shows everything
     Movie.find({}, function(err, movies) {
       res.render('movies/index', {
         movies
+        // really movies: movies -- thankyou es6
       })
     })
   }
