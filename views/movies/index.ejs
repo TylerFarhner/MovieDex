@@ -1,3 +1,5 @@
+<!-- Made a new movies/index ejs, using the UL/LI formatting instead of Th/TB format to try to get ID working -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +17,10 @@
     </nav>
 
     <ul>
-        <% movies.forEach(function(movie) { %>
+        <% movies.forEach(function(movie, idx) { %>
             <li>
-                Title: <%= movie.title %> 
+                Title: <a href="/movies/<%= idx %>"><%= movie.title %></a> 
+                <!-- bang bang, did the thang (now have clickable links) -->
                 - 
                 Released On: <%= movie.release %>
                 
