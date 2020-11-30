@@ -14,31 +14,16 @@
         <a href="../">Home</a>
     </nav>
 
-    <table>
-        <thead>
-            <th>Title</th>
-            <th>Release</th>
-            <th>Rating</th>
-            <th>Cast</th>
-        </thead>
-        <tbody>
-            <% movies.forEach(movie => { %>
-                <!-- <tr> table rows -->
-                    <tr>
-                        <!-- <td> table data (data cell) -->
-                            <td><%= movie.title %></td>
-                            <td><%= movie.release %></td>
-                            <td><%= movie.rating %></td>
-                            <td><%= movie.cast.join(", ")%></td>
-                            <td>
-                                <!-- not sure where to put this chunk below as not using UL/LI but table instead -->
-                                <form action="/movies/<%= movie._id %>?_method=DELETE" method="POST"></form>
-                                <button type="submit">X</button>
-                                <!-- oh snap this works -->
-                    </td>
-                </tr>
-            <% }) %>
-        </tbody>
-    </table>
+    <ul>
+        <% movies.forEach(function(movie) { %>
+            <li>
+                Title: <%= movie.title %> 
+                - 
+                Released On: <%= movie.release %>
+                
+            </li>
+        <% }); %>
+    </ul>
+
 </body>
 </html>

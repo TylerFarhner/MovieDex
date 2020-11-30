@@ -8,5 +8,6 @@ router.get('/new', moviesCtrl.new)
 router.post('/', moviesCtrl.create)
 // see all the resources
 router.get('/', moviesCtrl.index)
+router.delete('/:id', moviesCtrl.delete)
 
 module.exports = router

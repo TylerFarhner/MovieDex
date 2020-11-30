@@ -5,7 +5,8 @@ module.exports = {
     new: newMovie,
     create,
     index,
-    Movie
+    Movie,
+    delete: deleteMovie
     // ^^ this too :)
 }
 
@@ -40,5 +41,11 @@ function create(req, res) {
         movies
         // really movies: movies -- thankyou es6
       })
+    })
+  }
+
+  function deleteMovie(req, res) {
+    Movie.findByIdAndDelete(req.params.id, function(err, movie) {
+      res.redirect('/movies')
     })
   }

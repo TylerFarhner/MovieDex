@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MovieDex</title>
+</head>
+<body>
+    <h1>Movies Index</h1>
+
+    <nav>
+        <a href="./movies/new">Add Movie</a>
+        <a href="../">Home</a>
+    </nav>
+
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Release</th>
+            <th>Rating</th>
+            <th>Cast</th>
+        </thead>
+        <tbody>
+            <% movies.forEach(movie, idx => { %>
+                <!-- <tr> table rows -->
+                    <tr>
+                        <!-- <td> table data (data cell) -->
+                            <td><a href="/movies/<%= idx %>"><%= movie.title %></a></td>
+                            <td><%= movie.release %></td>
+                            <td><%= movie.rating %></td>
+                            <td><%= movie.cast.join(", ")%></td>
+                            <td>
+                                <!-- not sure where to put this chunk below as not using UL/LI but table instead -->
+                                <form action="/movies/<%= movie._id %>?_method=DELETE" method="POST"></form>
+                                <button type="submit">X</button>
+                                <!-- oh snap this works -->
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
