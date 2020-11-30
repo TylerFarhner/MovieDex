@@ -1,3 +1,4 @@
+const movie = require('../models/movie');
 const Movie = require('../models/movie')
 //  ^^ Forgot this guy
 
@@ -6,7 +7,8 @@ module.exports = {
     create,
     index,
     Movie,
-    delete: deleteMovie
+    delete: deleteMovie,
+    show,
     // ^^ this too :)
 }
 
@@ -41,6 +43,13 @@ function create(req, res) {
         movies
         // really movies: movies -- thankyou es6
       })
+    })
+  }
+
+  function show(req, res) {
+    console.log(req.params)
+    res.render('movies/show', {
+      movie: Movie.getOne(req.params.id)
     })
   }
 
