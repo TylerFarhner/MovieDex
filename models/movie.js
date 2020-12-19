@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const movies = require('../controllers/movies')
+// const movies = require('../controllers/movies')
 
 // shortcut to the mongoose.schema class
 const Schema = mongoose.Schema
