@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongoose Flights</title>
+</head>
+<body>
+    <h1>All Movies</h1>
+    <!-- STOLE THIS CODE BELOW -->
+    <a href="/">Back Home</a>
+    <a href="/movies/new">Create a New Flight</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Release</th>
+                <th>Rating</th>
+                <th>Cast</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% movies.forEach(function(movies) { %>
+                <tr>
+                    <td><%= movie.title %></td>
+                    <td><%= movie.release %></td>
+                    <td><%= movie.rating %></td>
+                    <td><%= movie.cast %></td>
+
+                    <!-- <td><a href="/flights/<%= flight._id %>">Details</a></td> -->
+                    <!--  ^^ useless until I implement getOne -->
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

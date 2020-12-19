@@ -1,18 +1,18 @@
 const mongoose = require('mongoose')
 // const movies = require('../controllers/movies')
 
-// shortcut to the mongoose.schema class
-const Schema = mongoose.Schema
+// compile schema into a model and export it
+
+
+const Schema = mongoose.Schema;
 
 const movieSchema = new Schema({
     title: String,
     release: Number,
     rating: String,
-    cast: [String]
+    cast: [String],
 })
 
-// compile schema into a model and export it
-module.exports = mongoose.model('Movie', movieSchema)
 
 function getAll() {
     return movies
@@ -26,3 +26,6 @@ module.exports = {
     getAll,
     getOne
 }
+module.exports = mongoose.model('Movie', movieSchema)
+// module.exports = mongoose.model('movie', movieSchema)
+// shortcut to the mongoose.schema class
