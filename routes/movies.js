@@ -14,5 +14,7 @@ router.get('/:id', moviesCtrl.show)
 router.delete('/:id', moviesCtrl.delete)
 // add edit
 router.get('/:id/edit', moviesCtrl.edit)
+// add update
+router.put('/:id', moviesCtrl.update)
 
 module.exports = router
