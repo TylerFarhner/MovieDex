@@ -20,15 +20,15 @@
 
   <form action="/movies" method="POST" autocomplete="off">
     <label>Title:
-      <input type="text" name="title">
+      <input type="text" name="title" required>
     </label>
 
     <label>Release Year:
-      <input type="number" name="release">
+      <input type="number" name="release" required>
     </label>
 
     <label>Rating
-      <select name="rating">
+      <select name="rating" required>
         <option value="G">G</option>
         <option value="PG">PG</option>
         <option value="PG-13">PG-13</option>
@@ -37,7 +37,7 @@
     </label>
 
     <label>Cast (separate actors with commas):
-      <input type="text" name="cast">
+      <input type="text" name="cast" required>
     </label>
 
     <input type="submit" value="Add Movie">
