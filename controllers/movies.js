@@ -40,7 +40,8 @@ function deleteMovie(req, res) {
 
 function edit(req, res) {
   Movie.findById(req.params.id, function(err, movie) {
-    res.render('coffees/edit', {
+    console.log(err, movie)
+    res.render('movies/edit', {
       movie
     })
   })
@@ -54,4 +55,5 @@ module.exports = {
   new: newMovie,
   create,
   delete: deleteMovie,
+  edit
 }
