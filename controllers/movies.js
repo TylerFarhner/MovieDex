@@ -48,9 +48,15 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  Movie.findByIdAndUpdate(req.params.id, function(err, movie) {
+  Movie.findById(req.params.id, function(err, movie) {
     console.log(err, movie)
-    res.redirect('/movies')
+    movie.title = req.body.title
+    movie.release = req.body.release
+    movie.rating = req.body.rating
+    movie.cast = req.body.cast
+    movie.save(function (err) {
+      res.redirect('/movies')
+    })
   })
 }
 
