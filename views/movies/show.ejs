@@ -13,14 +13,23 @@
     <h3><%= movie.rating %></h3>
     <h3><%= movie.cast %></h3>
 
-    <!-- Delete Button -->
-    <form action="/movies/<%= movie._id %>?_method=DELETE" method="POST">
-        <button type="submit">X</button>
-    </form>
 
-    <!-- Update Button -->
-    <a href="/movies/<%= movie._id %>/edit">Update Movie</a>
+    <footer>
 
+        <!-- Delete Button -->
+        <form action="/movies/<%= movie._id %>?_method=DELETE" method="POST">
+            <button class="deletebtn" type="submit">Delete Movie</button>
+        </form>
+        
+        <!-- Update link
+        <a href="/movies/<%= movie._id %>/edit">Update Movie</a> -->
+        
+        <!-- Update Button -->
+        <form action="/movies/<%= movie._id %>/edit" method="get">
+            <button type="submit">Update Movie</button>
+        </form>
+
+    </footer>
 
 </body>
 </html>
