@@ -18,17 +18,18 @@
     <a href="/movies">Library</a>
   </nav>
 
-  <form action="/movies" method="POST" autocomplete="off">
+  <form action="/movie/<%= movie._id %>?_method=PUT" method="POST" autocomplete="off">
     <label>Title:
-      <input type="text" name="title">
+      <input type="text" name="title" placeholder="<%= movie.title %>">
     </label>
 
     <label>Release Year:
-      <input type="number" name="release">
+      <input type="number" name="release" placeholder="<%= movie.release %>">
     </label>
 
     <label>Rating
       <select name="rating">
+        <option value="<%= movie.rating %>"><%= movie.rating %></option>
         <option value="G">G</option>
         <option value="PG">PG</option>
         <option value="PG-13">PG-13</option>
@@ -36,11 +37,11 @@
       </select>
     </label>
 
-    <label>Cast (separate actors with commas):
-      <input type="text" name="cast">
+    <label>Cast:
+      <input type="text" name="cast" placeholder="<%= movie.cast %>">
     </label>
 
-    <input type="submit" value="Add Movie">
+    <input type="submit" value="Update!">
   </form>
 
 </body>
