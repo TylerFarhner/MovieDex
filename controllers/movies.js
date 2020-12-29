@@ -38,6 +38,14 @@ function deleteMovie(req, res) {
   })
 }
 
+function edit(req, res) {
+  Movie.findById(req.params.id, function(err, movie) {
+    res.render('coffees/edit', {
+      movie
+    })
+  })
+}
+
 
 
 module.exports = {
