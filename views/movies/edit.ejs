@@ -20,11 +20,11 @@
 
   <form action="/movies/<%= movie._id %>?_method=PUT" method="POST" autocomplete="off">
     <label>Title:
-      <input type="text" name="title" placeholder="<%= movie.title %>">
+      <input type="text" name="title" placeholder="<%= movie.title %>" value="<%= movie.title %>">
     </label>
 
     <label>Release Year:
-      <input type="number" name="release" placeholder="<%= movie.release %>">
+      <input type="number" name="release" value="<%= movie.release %>">
     </label>
 
     <label>Rating
@@ -38,7 +38,7 @@
     </label>
 
     <label>Cast:
-      <input type="text" name="cast" placeholder="<%= movie.cast %>">
+      <input type="text" name="cast" value="<%= movie.cast %>">
     </label>
 
     <input type="submit" value="Update!">
