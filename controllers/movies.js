@@ -47,6 +47,13 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Movie.findByIdAndUpdate(req.params.id, function(err, movie) {
+    console.log(err, movie)
+    res.redirect('/movies')
+  })
+}
+
 
 
 module.exports = {
@@ -55,5 +62,6 @@ module.exports = {
   new: newMovie,
   create,
   delete: deleteMovie,
-  edit
+  edit,
+  update
 }
