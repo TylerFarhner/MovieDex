@@ -4,3 +4,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+footer {
+    display: inline-flex;
+}
