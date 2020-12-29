@@ -19,10 +19,6 @@
     <ul>
         <% movies.forEach(function(movie, idx) { %>
             <li>
-                <!-- Add the post request/delete button -->
-                <form action="/movies/<%= movie._id %>?_method=DELETE" method="POST">
-                    <button type="submit">X</button>
-                </form>
                     
                     <a href="/movies/<%= movie._id %>"><%= movie.title %></a> 
                     <!-- bang bang, did the thang (now have clickable links) -->
