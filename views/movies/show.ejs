@@ -7,9 +7,12 @@
 </head>
 <body>
     <a href="./">Library Please</a>
-    <h1><%= movies.title %></h1>
-    <h3><%= movies.release %></h3>
-    <h3><%= movies.rating %></h3>
-    <h3><%= movies.cast %></h3>
+    <h1><%= movie.title %></h1>
+    <h3><%= movie.release %></h3>
+    <h3><%= movie.rating %></h3>
+    <h3><%= movie.cast %></h3>
+    <form action="/movies/<%= movie._id %>?_method=DELETE" method="POST">
+        <button type="submit">X</button>
+    </form>
 </body>
 </html>

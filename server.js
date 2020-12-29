@@ -5,7 +5,7 @@ const indexRouter = require('./routes/index')
 const moviesRouter = require('./routes/movies')
 // have to req. when changing from config/database
 const mongoose = require('mongoose')
-const methodOverride = require('./routes/movies')
+const methodOverride = require('method-override')
 
 // set up the express app
 const app = express()
@@ -39,7 +39,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({
     extended: false
 }))
-// app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))
 
 // mount our routes with app.use()
 app.use('/', indexRouter)
