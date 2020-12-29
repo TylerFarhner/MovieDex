@@ -24,7 +24,7 @@ Welcome to MovieDex! The application to create, store, and view your own persona
 ### **Update:** Getting Started
 **REMEMBER** to download node modules if you choose to clone or download this repository!!
 
-[Let 'er Rip](deploy.link)
+[Let 'er Rip](prjtwo.herokuapp.com)
 
 If you want to see wireframes or the ERD, swing over to [my Trello.](https://trello.com/b/3kW4uA2q/moviedex)
 
