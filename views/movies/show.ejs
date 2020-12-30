@@ -7,12 +7,22 @@
     <title>Show</title>
 </head>
 <body>
-    <a href="./">Library Please</a>
-    <h1><%= movie.title %></h1>
-    <h3><%= movie.release %></h3>
-    <h3><%= movie.rating %></h3>
-    <h3><%= movie.cast %></h3>
 
+    <header>
+        <h1><%= movie.title %></h1>
+    </header>
+
+    <nav>
+        <a href="./">Library</a>
+    </nav>
+
+    <div class="container">
+
+        <p>Released: <%= movie.release %></p>
+        <p>Rating: <%= movie.rating %></p>
+        <p>Starring: <%= movie.cast %></p>
+        
+    </div>
 
     <footer>
 
@@ -26,7 +36,7 @@
         
         <!-- Update Button -->
         <form action="/movies/<%= movie._id %>/edit" method="get">
-            <button type="submit">Update Movie</button>
+            <button class="updatebtn" type="submit">Update Movie</button>
         </form>
 
     </footer>
