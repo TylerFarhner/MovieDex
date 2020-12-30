@@ -5,6 +5,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    width: 100%;
 }
 
 .container {
