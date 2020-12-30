@@ -10,27 +10,33 @@
     <title>MovieDex</title>
 </head>
 <body>
-    <h1>Movies Index</h1>
+
+    <header>
+        <h1>Movies Index</h1>
+    </header>
 
     <nav>
         <a href="./movies/new">Add Movie</a>
         <a href="../">Home</a>
     </nav>
 
-    <ul>
-        <% movies.forEach(function(movie, idx) { %>
-            <li>
+    <div class="container">
+
+        <ul>
+            <% movies.forEach(function(movie, idx) { %>
+                <li>
                     
                     <a href="/movies/<%= movie._id %>"><%= movie.title %></a> 
                     <!-- bang bang, did the thang (now have clickable links) -->
                     <!--  TODO; now need to create the show function -->
                     - 
-                <%= movie.rating %>
-                
-                
-            </li>
-        <% }); %>
-    </ul>
-
+                    <%= movie.rating %>
+                    
+                    
+                </li>
+                <% }); %>
+            </ul>
+            
+        </div>
 </body>
 </html>
